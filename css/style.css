@@ -1,48 +1,87 @@
-*{
-  margin:0;
-  padding:0;
+/* Reset */
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.logo{
-  margin:20px;
-}
-.dropdown-menu {
-  background-color: lightgrey;
-  position: absolute;
 
-  display: none;
+/* Typo */
+body {
+  font-family: 'Roboto', sans-serif;
+}
 
+/* Buttons */
+.btn {
+  border-radius: 10px;
+  margin: 0 10px;
 }
-.position-relative{
+a.btn.btn-primary {
+  background-color: #ddd;
+  color: #000;
+}
+a.btn.btn-secondary {
+  background-color: #000;
+  color: #fff;
+}
 
+header {
+  margin-top: 70px;
 }
-.dropdown-menu li{
-  list-style: none;
+.logo {
+  width: 30px;
 }
-.row{
+/* Main Menu */
+.main-menu {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  margin:20px;
+  align-items: center;
 }
-.list1 ul  ,.list3 ul {
+.main-menu .main-menu-list {
   display: flex;
-}
-.list1 ul li{
   list-style: none;
-  padding: 20px;
+  align-items: center;
 }
-.list3 ul :first-child{
-  background-color: lightgrey;
-  padding:10px;
-  margin:10px;
+.main-menu a {
+  color: #777;
+  text-decoration: none;
+}
+
+.main-menu .main-menu-list > li > a {
+  padding: 10px 25px;
+}
+.main-menu .main-menu-list > li {
+  position: relative;
+}
+.main-menu-left .main-menu-list > li:nth-child(2) > a {
+  color: #000;
+}
+
+.main-menu-dropdown-container {
+  padding-top: 10px;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+.main-menu .main-menu-dropdown {
+  white-space: nowrap;
+  list-style: none;
+  padding: 15px 10px;
   border-radius: 10px;
-  list-style: none;
+  box-shadow: rgb(0 0 0 / 4%) 0px 0px 4px 0px, rgb(0 0 0 / 8%) 0px 8px 16px 0px;
 }
-.list3 ul :last-child{
-  background-color: black;
-  padding:10px;
-  margin:10px;
-  color:#fff;
-  border-radius: 10px;
-  list-style: none;
+.main-menu .main-menu-dropdown li a {
+  display: inline-block;
+  padding: 10px 0;
 }
+
+.main-menu-dropdown-container.active {
+  display: block;
+}
+
+/* Modo 0 */
+/* .main-menu-list > li:hover > .main-menu-dropdown-container  {
+  display: block;
+} */
